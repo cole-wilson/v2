@@ -1,0 +1,67 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{{page.title}}</title>
+	<meta name="description" content="{{page.desc}}">
+	<link href="/main.css" rel="stylesheet" type="text/css" />
+		<script>window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+		</script>
+	<script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+	<div style='--img:url("{{page.image}}")'><div></div></div>
+
+	<main>
+		<header>
+			<h1>cole wilson</h1>
+			<div>
+				{% if page.date %}<time>{{page.date | date: "%m.%d.%Y"}}</time>{% endif %}
+				{% if page.comments %}<span></span>{% endif %}
+			</div>
+			<br>
+			{% for link in page.nav %}
+			[<a{%if link.href%} href="{{link.href}}"{%endif%}{%if link.onclick%} onclick="{{link.onclick}}"{% endif %}>{{ link.title }}</a>]
+			{% endfor %}
+		</header>
+		<section>
+			<article>
+				<details><summary>table of contents</summary>{% include toc.html html=content %}</details>
+{{content}}
+			</article>
+		</section>
+
+		{% if page.comments %}
+		<section>
+			<details id="comments">
+				<summary>comments</summary>
+				{% include comments.html %}
+			</details>
+		</section>
+		{% endif %}
+		</main>
+
+		<footer>
+			<span>&copy;</span>
+			<div>{{site.time | date: '%y'}} cole wilson: ea67b8</div>
+		</footer>
+		<script>
+			var page = {
+				layout: "{{ page.layout }}",
+				build_date: "{{ 'now' | date_to_xmlschema }}",
+			}
+		</script>
+		<script type="module" src="https://unpkg.com/rough-notation?module"></script>
+		<script type="module" src="/script.js"></script>
+  </body>
+</html>

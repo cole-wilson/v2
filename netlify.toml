@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/+*"
+  to = "https://shorty.ridgeback.cole.ws/:splat"
+  status = 301
+  force = false
+  

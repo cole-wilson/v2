@@ -1,0 +1,78 @@
+@font-face {
+	font-family: "firacode";
+	src: url("/fonts/firacode_regular.woff2") format('woff2');
+}
+@font-face {
+	font-family: "firacode";
+	src: url("/fonts/firacode_bold.woff2") format('woff2');
+	font-weight: bold;
+}
+@font-face {
+	font-family: "victormono";
+	src: url("/fonts/victormono_italic.woff2") format('woff2');
+	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {line-height: 0.5em;}
+h1 {font-size: 2.0em;font-weight: bold;}
+h2 {font-size: 1.8em;font-weight: bold;}
+h3 {font-size: 1.6em;font-weight: bold;}
+h4 {font-size: 1.4em;font-weight: bold;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1.0em;}
+
+a {
+	text-decoration: underline;
+	color: $color;
+}
+blockquote {
+	border-left: 1px solid black;
+	padding-left: 5px;
+}
+summary{
+	font-weight: bold;
+	cursor: pointer;
+}
+table {
+	border-collapse: collapse;
+	width:100%;
+	td {border: 1px solid $color;}
+}
+img {
+	display: block;
+	image-rendering: pixelated;
+	width: 100%;
+	max-height: 50vh;
+	min-height: 20v;
+	border: 0.5px solid black;
+	:before { 
+  		content: "unfortunately, this image is broken!";
+		display: block;
+		margin-bottom: 10px;
+	}
+	:after {
+  		margin-top: 10px;
+  		content: "(url: " attr(src) ")";
+  		display: block;
+  		font-size: 12px;	
+	}
+}
+article {
+	> p:first-of-type::first-letter {
+			float: left;
+			font-family: monospace;
+			font-size: 3em;
+			line-height: 20px;
+			padding-top: 6px;
+			padding-right: 4px;
+			padding-left: 2px;
+	}
+	> p:first-of-type::first-line {
+			font-weight: bold;
+	}
+}
+:not(pre) > code, pre {
+	background: $color;
+	color: $background;
+	padding: 2px;
+}
