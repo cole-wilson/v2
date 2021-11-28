@@ -34,12 +34,12 @@ layout: compress
 			[<a{%if link.href%} href="{{link.href}}"{%endif%}{%if link.onclick%} onclick="{{link.onclick}}"{% endif %}>{{ link.title }}</a>]
 			{% endfor %}
 		</header>
-		<section>
-			<article>
-				<details><summary>table of contents</summary>{% include toc.html html=content %}</details>
-{{content}}
-			</article>
-		</section>
+		<!-- <section> -->
+		<!-- 	<article> -->
+		<!-- 		<details><summary>table of contents</summary>{% include toc.html html=content %}</details> -->
+<!-- {{content}} -->
+		<!-- 	</article> -->
+		<!-- </section> -->
 
 		{% if page.comments %}
 		<section>
