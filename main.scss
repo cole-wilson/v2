@@ -68,7 +68,7 @@ body {
 		right: 0;
 		bottom: 0;
 		cursor: crosshair;
-		color:grey;
+		// color:grey;
 		width: 20vw;
 		text-align: right;
 
@@ -78,7 +78,7 @@ body {
 			transform: translateY(0.25em);
 			display:inline-block
 		}
-		:hover, :focus {
+		&:hover, &:focus {
 			div {
 				display: inline-block;
 			}
