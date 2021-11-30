@@ -1,2 +1,8 @@
+projects:
+  - name: sailboat
+    desc: a python packaging and development tool
+    url: //github.com/cole-wilson/sailboat
+
+
 sass:
   style: compressed
