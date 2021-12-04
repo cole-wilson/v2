@@ -2,6 +2,9 @@ projects:
   - name: sailboat
     desc: a python packaging and development tool
     url: //github.com/cole-wilson/sailboat
+  - name: you can't view MY source!
+    desc: a challenge, can you solve it?
+    url: //nosource.cole.ws
 
 
 sass:
