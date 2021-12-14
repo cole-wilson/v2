@@ -6,6 +6,18 @@ projects:
     desc: a challenge, can you solve it?
     url: //nosource.cole.ws
 
+permalink: /:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+      layout: main
+      subpage: true
+      
 
 sass:
   style: compressed

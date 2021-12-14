@@ -24,6 +24,11 @@ body {
 		margin: $vertical-spacing 0 $vertical-spacing;
 		text-align: center;
 		display: block;
+		div:first-of-type {
+			.l, .r {position: fixed;top:0;}
+			.l {left:0}
+			.r {right:0}
+		}
 	}
 
 	section, header {
@@ -55,6 +60,7 @@ body {
 	main {
 		background: $background;
 		color: $color;
+		min-width: 50vw;
 		max-width: 100vw;
 		position: absolute;
 		left: 50%;

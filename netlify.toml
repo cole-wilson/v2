@@ -3,4 +3,14 @@
   to = "https://shorty.ridgeback.cole.ws/:splat"
   status = 302
   force = false
-  
+
+[[redirects]]
+  from = "/key.pgp"
+  to = "/key.gpg"
+  status = 302
+  force = false
+
+[[headers]]
+  for = "/key.gpg"
+  [headers.values]
+    Content-Type = "text/plain"

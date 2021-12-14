@@ -17,6 +17,9 @@ layout: compress
 };
 		</script>
 	<script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fyu/fyu.min.js"></script>
+	<script>makeithell()</script>
+
 </head>
 
 <body>
@@ -24,7 +27,11 @@ layout: compress
 
 	<main>
 		<header>
-			<h1>cole wilson</h1>
+			<div>
+				<div class="l">{% if page.subpage %}[<a href="/">home</a>]{% endif %}</div>
+				<div class="r">{% for link in page.links %}<a href="{{link.link}}">{{link.title}}</a>{% endfor %}</div>
+			</div>
+			<h1>{{page.title}}</h1>
 			<div>
 				{% if page.date %}<time>{{page.date | date: "%m.%d.%Y"}}</time>{% endif %}
 				{% if page.comments %}<span></span>{% endif %}
