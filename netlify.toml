@@ -5,12 +5,19 @@
   force = false
 
 [[redirects]]
+  from = "*/"
+  to = ":splat/index.txt"
+  status = 200
+  force = false
+
+
+[[redirects]]
   from = "/key.pgp"
   to = "/key.gpg"
   status = 302
   force = false
 
 [[headers]]
-  for = "/key.gpg"
+  for = "*"
   [headers.values]
     Content-Type = "text/plain"
