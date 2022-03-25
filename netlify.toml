@@ -1,0 +1,16 @@
+[[redirects]]
+  from = "/+*"
+  to = "https://shorty.ridgeback.cole.ws/:splat"
+  status = 302
+  force = false
+
+[[redirects]]
+  from = "/key.pgp"
+  to = "/key.gpg"
+  status = 302
+  force = false
+
+[[headers]]
+  for = "*"
+  [headers.values]
+    Content-Type = "text/plain"
